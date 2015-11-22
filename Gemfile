@@ -4,9 +4,21 @@ source 'https://rubygems.org'
 gem 'therubyracer'
 gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails'
+=begin
+rails g bootstrap:install less
+rails g bootstrap:layout application fluid   (press Y)
+=end
+
 # Devise
 gem "devise"
+=begin
+rails g devise:install
+rails g devise User (Your model)
+rake db:install
+rails g devise:views
+=end
 
+#Mysql
 =begin
   gem 'mysql2'
   group :test do
