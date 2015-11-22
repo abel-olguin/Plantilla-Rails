@@ -1,0 +1,6 @@
+es:
+  hello: "Hola mundo"
+  user:
+      login: "Entrar"
+      logout: "Salir"
+      register: "Registrarse"

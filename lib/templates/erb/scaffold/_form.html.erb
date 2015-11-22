@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <%%= form_for(@<%= singular_table_name %>, :html => { class: 'form-horizontal' }) do |f| %>
+
+  <%% if @<%= singular_table_name %>.errors.any? %>
+      <div id="error_explanation">
+        <h2><%%= pluralize(@<%= singular_table_name %>.errors.count, "error") %> prohibited this entrada from being saved:</h2>
+
+        <ul>
+          <%% @<%= singular_table_name %>.errors.full_messages.each do |message| %>
+              <li><%%= message %></li>
+          <%% end %>
+        </ul>
+      </div>
+  <%% end %>
+
+  <% attributes.each do |attribute| -%>
+
+      <div class="form-group">
+        <%%= f.label :<%= attribute.name %>, class: 'control-label' %>
+
+        <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, class:'form-control' %>
+      </div>
+
+  <% end -%>
+
+  <div class="form-actions">
+    <%%= link_to 'Cancel', <%= index_helper %>_path, class: 'btn' %>
+    <%%= f.submit class: 'btn btn-success' %>
+  </div>
+
+  <%% end %>
+</div>
