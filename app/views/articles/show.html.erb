@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+  <div class="col-lg-8 col-lg-offset-2 ">
+          <div>
+          <strong>Title</strong>
+            <%= @article.title %>
+          </div>
+          <div>
+            <strong>Body</strong>
+            <%= @article.body %>
+          </div>
+
+          <div>
+            <strong>Autor</strong>
+            <%= @article.user.email %>
+          </div>
+          <div>
+            <strong>Views</strong>
+            <%= @article.visits %>
+          </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4 ">
+      <ul class="nav nav-list">
+        <li><%= link_to '<i class="icon-list"></i> Article Index'.html_safe, articles_path %></li>
+        <li><%= link_to '<i class="icon-wrench"></i> Edit'.html_safe, edit_article_path(@article) %></li>
+        <li><%= link_to '<i class="icon-plus"></i> New Article'.html_safe, new_article_path %></li>
+      </ul>
+    </div><!--/.well -->
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing articles</h1>
+
+  <table class="table table-responsive table-hover" width="100%">
+    <tr>
+                <th>Title</th>
+                <th>Body</th>
+      
+      <th colspan="3"></th>
+
+    </tr>
+
+    <%= content_tag_for(:tr, @articles) do |article| %>
+            <td><%= article.title %></td>
+            <td><%= article.body %></td>
+        <td><%= link_to 'Show', article, class: 'btn btn-default' %></td>
+    <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-info' %></td>
+    <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+    <% end %>
+  </table>
+
+  <div class="form-actions">
+    <%= link_to 'New Article', new_article_path, class: 'btn btn-success' %>
+  </div>
+
+</div>

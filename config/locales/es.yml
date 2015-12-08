@@ -4,3 +4,6 @@ es:
       login: "Entrar"
       logout: "Salir"
       register: "Registrarse"
+      profile: "Perfil"
+  home: "Inicio"
+  articles: "Articulos"

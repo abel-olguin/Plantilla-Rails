@@ -1,0 +1,21 @@
+
+<div class="page-header">
+  <h1>Editing Article</h1>
+</div>
+
+<div class="container-fluid">
+
+  <div class="col-lg-8 col-lg-offset-2 well">
+    <%= render 'form' %>
+
+    <div class="more-info-links" style="margin-top: 20px">
+        <%= link_to 'Article Index'.html_safe, articles_path, class: 'btn btn-default' %>
+        <%= link_to 'Show'.html_safe, @article, class: 'btn btn-info' %>
+        <%= link_to 'Destroy'.html_safe, @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <%= link_to 'New Article'.html_safe, new_article_path , class: 'btn btn-default'%>
+      </ul>
+    </div>
+
+  </div>
+  <div style="clear:both"></div>
+</div>
